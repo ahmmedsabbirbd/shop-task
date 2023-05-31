@@ -1,11 +1,11 @@
 # ShopTask (Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine)
 <!-- [Live Link](https://bmi-calculator-ostad.netlify.app) -->
 
-The Students is a simple Laravel project and updated versioin. I include Requests | Response | Route (web|api) | Controller | Factories | Migrations | Migrate | Seeders.
+The ShopTask is a simple Laravel project. I include Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine.
 
 And it's assignment projects of PHP and Larvel of OSTAD.
 
-![wellcome project](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/wellcome.png)
+![wellcome project](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets//wellcome.png)
 
 ## Table of Contents
 
@@ -29,44 +29,45 @@ And it's assignment projects of PHP and Larvel of OSTAD.
 
 ## Description
 
-The Students is a simple Laravel project and updated versioin. I include Requests | Response | Route (web|api) | Controller | Factories | Migrations | Migrate | Seeders.
+The ShopTask is a simple Laravel project. I include Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine.
 
 ## Features
 | Key Features                | Description                                                  |
 | ---------------------------| ------------------------------------------------------------ | 
-|  Requests | URL and Query Parameter and Header and Input and Cookie and File |
-|  Response | Json response and (URL and Query Parameter and Header and Input and Cookie and File) type value accecpt and return |
-|  Route (web|api)     | This website I use `web` and `api` | 
-|  Factories | I set factories in StudentFactory.php file and i collect "[Larave Faker](https://github.com/fzaninotto/Faker)" |
-|  Migrations     | i create create_students_table migration file |
-|  Migrate     | create_students_table migrate with database |
-|  Seeders     | i create fake 10 record |
-|  Controller     | create two controller and i properly requests and response |
+|  Request Validation | I "App\Http\Requests" create this file and validaton request  |
+|  Request Redirect | when visit '/home' url then i redirect '/dashboard' using 302 |
+|  Global Middleware     | request method and URL for every incoming request, Log the information to the Laravel log file. and i apply it "karnel.php" | 
+|  Route Middleware | i create route middleware  and i wrap "/profile", "/setting" in group route middleware  |
+|  Controller     | i create ProductController and i handle CRUD. it's index, store, update, destory |
+|  Single Action Controller     | i create ContactController  and i use __invoke method |
+|  Resource Controller     | i create PostController resource controller via commnad "php artisan make:controller PostController --resource"  |
+|  Blade Template Engine     | i create welcome.blade.php and preview one navigation and "wellcome to laravel" |
 
 
 ## Demo
 Project Home Page
 
-[![Demo Video](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/wellcome.png)](https://youtu.be/RYAh3rSyWHs)
+[![Demo Video](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/wellcome.png)](https://youtu.be/RYAh3rSyWHs)
 
 ## Technologies Used
 
 List the technologies, libraries, frameworks, or languages that you used to build your project. You can also provide links to their official websites or documentation.
 
 - Laravel
+- MSQL
 ## Installation
 
 Clone the repository to your local machine
 
 bash
 
-    git clone https://github.com/ahmmedsabbirbd/students.git
+    git clone https://github.com/ahmmedsabbirbd/shop-task.git
 
 Open Project folder:
 
 bash
 
-     cd students
+     cd shop-task
 
 Install the necessary dependencies by running the following command in the project directory:
 
@@ -88,38 +89,46 @@ Note: If you encounter any issues while installing or running the project locall
 
 ## Document of assignment projects of this project
 
-1. ## Question 1:
-     `You have a Laravel application with a form that submits user information using a `POST` request. Write the code to retrieve the 'name' input field value from the request and store it in a variable called $name.`
+1. ## Task 1: Request Validation
+     `Implement request validation for a registration form that contains the following fields: name, email, and password. Validate the following rules:`
 
-     I create a controller and i decleare object instance "Request $request" and i accept "$request->input('name') as $name value
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-1.png)
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-1.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-2.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-3.png)
+     
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-4.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-5.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-6.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-1.png)
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-1.png)
 
-2. ## Question 2:
+2. ## Task 2:
      `In your Laravel application, you want to retrieve the value of the `'User-Agent'` header from the current request. Write the code to accomplish this and store the value in a variable called `$userAgent.``
 
      I create a controller and i decleare object instance "Request $request" and i accept "$request->header('User-Agent') as $userAgent value
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-2.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-2.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-2.png)
-3. ## Question 3:
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-2.png)
+3. ## Task 3:
      `You are building an API endpoint in Laravel that accepts a GET request with a `'page'` query parameter. Write the code to retrieve the value of the 'page' parameter from the current request and store it in a variable called `$page`. If the parameter is not present, set `$page` to `null`.`
      
      I create a controller and i decleare object instance "Request $request" and i accept "$request->query('page') as $page value
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-3.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-3.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-3.png)
-4. ## Question 4:
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-3.png)
+4. ## Task 4:
      
      Create a JSON response in Laravel with the following data:
 
@@ -133,36 +142,36 @@ Note: If you encounter any issues while installing or running the project locall
      
      I create a controller, it's StudentController and I have singleIndext method and i return single student data.
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-4.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-4.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-4.png)
-5. ## Question 5:
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-4.png)
+5. ## Task 5:
      
      `You are implementing a file upload feature in your Laravel application. Write the code to handle a file upload named `'avatar'` in the current `request` and store the uploaded file in the `'public/uploads'` directory. Use the `original filename` for the uploaded file.`
      
      I create a controller and i decleare object instance "Request $request" and i accept "$request->file('avatar') as $avatar value and i get photo current name name (getClientOriginalName()) this method in php laravel and uploaded photo my "public/upload" "$avatar->move(public_path('/uploads'), $avatarName);" this method
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-5.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-5.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-5.png)
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-5.png)
 
-6. ## Question 6:
+6. ## Task 6:
      
      `Retrieve the value of the `'remember_token'` cookie from the current request in Laravel and store it in a variable called `$rememberToken.` If the cookie is not present, set $rememberToken to null.`
      
      I create a controller and i decleare object instance "Request $request" and i accept "$request->cookie('remember_token') as $rememberToken value
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-6.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-6.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-6-v1.png)
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-6-v2.png)
-7. ## Question 7:
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-6-v1.png)
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-6-v2.png)
+7. ## Task 7:
      
      `Create a route in Laravel that handles a `POST` request to the `'/submit'` URL. Inside the route closure, retrieve the `'email'` input parameter from the request and store it in a variable called `$email`. Return a JSON response with the following data:`
 
@@ -180,16 +189,16 @@ Note: If you encounter any issues while installing or running the project locall
      
      I create SubmitController and i decleare object instance "Request $request" and i accept "$request->input('email') and store it $email value
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-w-7.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-7.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/assignment_q-p-7.png)
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-7.png)
  
 
 ## Laravel Folder Structure
      
-![Laravel Folder Structure](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/folder-structure.png)
+![Laravel Folder Structure](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/folder-structure.png)
 
 ## Route
 
@@ -198,7 +207,7 @@ Note: If you encounter any issues while installing or running the project locall
      2. [Route Groups] Creare Group Route
      3. [Regular Expression] Validate With Regular Expression
 
-     ![Web Route](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/web-route.png)
+     ![Web Route](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/web-route.png)
 
 2. ### Api.php
      1. Creare Single Route
@@ -206,34 +215,21 @@ Note: If you encounter any issues while installing or running the project locall
      3. [Regular Expression] Validate With Regular Expression
      4. [Route Prefixes] use Route Prefixes
 
-     ![Api Route](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/api-route.png)
+     ![Api Route](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/api-route.png)
 
 ## Seeders
 
 1. ### Seeders
      1. Creare 10 Fake data
 
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/seeders.png)
+     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/seeders.png)
 
 ## Factories
 
 1. ### Factories
      1. id, name, age added
 
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/factories.png)
-## Migrations
-
-1. ### Migrations
-     1. id, name, age added
-
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/migrations.png)
-
-## Migrate
-
-1. ### Migrate
-     1. id, name, age added
-
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/students/master/public/assets/documentation/migrate.png)
+     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/factories.png)
 
 ## Usage
 
@@ -241,7 +237,7 @@ Note: If you encounter any issues while installing or running the project locall
 To get started with Book, you will need to follow the installation instructions in the previous section.
 
 ## API Documentation
-Did not Provide any API
+
 
 ## Contributing
 

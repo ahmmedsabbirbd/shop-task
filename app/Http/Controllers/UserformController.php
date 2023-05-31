@@ -16,7 +16,8 @@ class UserformController extends Controller
      */
     public function index()
     {
-        return UserformResource::collection(Userform::all());
+        // return UserformResource::collection(Userform::all());
+        return "dON";
     }
 
     /**
@@ -24,8 +25,9 @@ class UserformController extends Controller
      */
     public function store(StoreUserformRequest $request)
     {
-        $Userform = Userform::create($request->validated());
-        return  UserformResource::make( $Userform );
+        // $Userform = Userform::create($request->validated());
+        // return  UserformResource::make( $Userform );
+        return "dON";
     }
 
     /**
