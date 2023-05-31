@@ -1,7 +1,7 @@
 # ShopTask (Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine)
 <!-- [Live Link](https://bmi-calculator-ostad.netlify.app) -->
 
-The ShopTask is a simple Laravel project. I include Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine.
+The ShopTask is a simple Laravel API project. I include Request Validation | Request Redirect | Global Middleware | Route Middleware | Controller | Single Action Controller | Resource Controller | Blade Template Engine.
 
 And it's assignment projects of PHP and Larvel of OSTAD.
 
@@ -17,10 +17,6 @@ And it's assignment projects of PHP and Larvel of OSTAD.
 - [Document of assignment projects of this project](#document-of-assignment-projects-of-this-project)
 - [Laravel Folder Structure](#laravel-folder-structure)
 - [Route](#route)
-- [Seeders](#seeders)
-- [Factories](#factories)
-- [Migrations](#migrations)
-- [Migrate](#migrate)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
 - [Contributing](#contributing)
@@ -210,7 +206,7 @@ To get started with Book, you will need to follow the installation instructions 
 
 ## API Documentation
 
-[Postman Documentation](https://documenter.getpostman.com/view/26346363/2s93mAV16Y#f8161aa0-a165-4299-a285-3ef366d31bc4)
+[Postman Documentation Website](https://documenter.getpostman.com/view/26346363/2s93mAV16Y#f8161aa0-a165-4299-a285-3ef366d31bc4)
 
 
 ![Postman Documentation](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/postman-documentation.png)
