@@ -210,6 +210,10 @@ To get started with Book, you will need to follow the installation instructions 
 
 ## API Documentation
 
+[Postman Documentation](https://documenter.getpostman.com/view/26346363/2s93mAV16Y#f8161aa0-a165-4299-a285-3ef366d31bc4)
+
+
+![Postman Documentation](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/postman-documentation.png)
 
 ## Contributing
 
