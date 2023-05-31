@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/home', function() {
 Route::get('/dashboard', function() {
     return "Dashboard page";
 });
+
+Route::resource('product', ProductController::class);

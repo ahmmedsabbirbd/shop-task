@@ -18,7 +18,13 @@ class ProductController extends Controller
         return ProductResource::collection(Product::all());
     }
 
-   
+    // not underderstand
+    public function create()
+    {
+        // Display the form to create a new product
+        return view('product.create');
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -34,6 +40,16 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         return ProductResource::make( $product );
+    }
+
+    // not underderstand
+    public function edit($id)
+    {
+        // Find the product by ID
+        $product = Product::findOrFail($id);
+
+        // Display the form to edit an existing product
+        return view('product.edit', compact('product'));
     }
     
     /**

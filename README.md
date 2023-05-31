@@ -5,7 +5,7 @@ The ShopTask is a simple Laravel project. I include Request Validation | Request
 
 And it's assignment projects of PHP and Larvel of OSTAD.
 
-![wellcome project](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/wellcome.png)
+![wellcome project](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/wellcome.png)
 
 ## Table of Contents
 
