@@ -108,128 +108,100 @@ Note: If you encounter any issues while installing or running the project locall
 
      ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-1.png)
 
-2. ## Task 2:
-     `In your Laravel application, you want to retrieve the value of the `'User-Agent'` header from the current request. Write the code to accomplish this and store the value in a variable called `$userAgent.``
-
-     I create a controller and i decleare object instance "Request $request" and i accept "$request->header('User-Agent') as $userAgent value
-
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-2.png)
-     
-     And postman request and output.
-
      ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-2.png)
-3. ## Task 3:
-     `You are building an API endpoint in Laravel that accepts a GET request with a `'page'` query parameter. Write the code to retrieve the value of the 'page' parameter from the current request and store it in a variable called `$page`. If the parameter is not present, set `$page` to `null`.`
+
+2. ## Task 2: Request Redirect
+     `Create a route /home that redirects to /dashboard using a 302 redirect.`
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-2-w-1.png)
+3. ## Task 3: Global Middleware
+     `Create a global middleware that logs the request method and URL for every incoming request. Log the information to the Laravel log file.`
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-3-w-1.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-3-w-2.png)
      
-     I create a controller and i decleare object instance "Request $request" and i accept "$request->query('page') as $page value
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-3-w-3.png)
+      
+4. ## Task 4:Route Middleware
+     `Create a route group for authenticated users only. This group should include routes for /profile and /settings. Apply a middleware called AuthMiddleware to the route group to ensure only authenticated users can access these routes.`
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-3.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-4-w-1.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-4-w-2.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-4-w-3.png) 
+5. ## Task 5: Controller
      
-     And postman request and output.
+     `Create a controller called ProductController that handles CRUD operations for a resource called Product. Implement the following methods:
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-3.png)
-4. ## Task 4:
-     
-     Create a JSON response in Laravel with the following data:
-
-          {
-               "message": "Success",
-               "data": {
-                    "name": "John Doe",
-                    "age": 25
-               }    
-          }
-     
-     I create a controller, it's StudentController and I have singleIndext method and i return single student data.
-
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-4.png)
-     
-     And postman request and output.
-
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-4.png)
-5. ## Task 5:
-     
-     `You are implementing a file upload feature in your Laravel application. Write the code to handle a file upload named `'avatar'` in the current `request` and store the uploaded file in the `'public/uploads'` directory. Use the `original filename` for the uploaded file.`
-     
-     I create a controller and i decleare object instance "Request $request" and i accept "$request->file('avatar') as $avatar value and i get photo current name name (getClientOriginalName()) this method in php laravel and uploaded photo my "public/upload" "$avatar->move(public_path('/uploads'), $avatarName);" this method
-
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-5.png)
-     
-     And postman request and output.
-
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-5.png)
-
-6. ## Task 6:
-     
-     `Retrieve the value of the `'remember_token'` cookie from the current request in Laravel and store it in a variable called `$rememberToken.` If the cookie is not present, set $rememberToken to null.`
-     
-     I create a controller and i decleare object instance "Request $request" and i accept "$request->cookie('remember_token') as $rememberToken value
-
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-6.png)
-     
-     And postman request and output.
-
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-6-v1.png)
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-6-v2.png)
-7. ## Task 7:
-     
-     `Create a route in Laravel that handles a `POST` request to the `'/submit'` URL. Inside the route closure, retrieve the `'email'` input parameter from the request and store it in a variable called `$email`. Return a JSON response with the following data:`
+     index(): Display a list of all products.
 
 
-          {
+     create(): Display the form to create a new product.
 
 
-          "success": true,
+     store(): Store a newly created product.
 
 
-          "message": "Form submitted successfully."
+     edit($id): Display the form to edit an existing product.
 
 
-          }
-     
-     I create SubmitController and i decleare object instance "Request $request" and i accept "$request->input('email') and store it $email value
+     update($id): Update the specified product.
 
-     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-w-7.png)
+
+     destroy($id): Delete the specified product.`
+      
+
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-1.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-2.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-3.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-4.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-5.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-6.png)
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-w-7.png)
      
      And postman request and output.
 
-     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-p-7.png)
+     ![Postman](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-5-p-1.png)
+
+6. ## Task 6: Single Action Controller
+     
+     `Create a single action controller called ContactController that handles a contact form submission. Implement the __invoke() method to process the form submission and send an email to a predefined address with the submitted data.`
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-6-w-1.png)
+7. ## Task 7:  Resource Controller
+     
+     `Create a resource controller called PostController that handles CRUD operations for a resource called Post. Ensure that the controller provides the necessary methods for the resourceful routing conventions in Laravel.`
+
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-7-w-1.png)
+
+8. ## Task 8: Blade Template Engine
+     
+     `Create a Blade view called welcome.blade.php that includes a navigation bar and a section displaying the text "Welcome to Laravel!"..`
+
+
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-8-w-1.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-8-w-2.png)
+     ![code view](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/assignment_t-8-w-3.png)
  
-
-## Laravel Folder Structure
-     
-![Laravel Folder Structure](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/folder-structure.png)
-
 ## Route
 
 1. ### Web.php
-     1. Creare Single Route
-     2. [Route Groups] Creare Group Route
-     3. [Regular Expression] Validate With Regular Expression
 
      ![Web Route](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/web-route.png)
 
-2. ### Api.php
-     1. Creare Single Route
-     2. [Route Groups] Creare Group Route
-     3. [Regular Expression] Validate With Regular Expression
-     4. [Route Prefixes] use Route Prefixes
+2. ### api.php
 
-     ![Api Route](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/api-route.png)
-
-## Seeders
-
-1. ### Seeders
-     1. Creare 10 Fake data
-
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/seeders.png)
-
-## Factories
-
-1. ### Factories
-     1. id, name, age added
-
-     ![Seeders](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/factories.png)
+     ![API Route](https://raw.githubusercontent.com/ahmmedsabbirbd/shop-task/master/public/assets/documentation/api-route.png)
 
 ## Usage
 

@@ -1,5 +1,5 @@
 @extends('layout.app');
 
-<!-- @section('content')
+@section('content')
     @include('componnets.banner')
-@endsection; -->
+@endsection;
